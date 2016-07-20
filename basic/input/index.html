@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>javascript</title>
+  </head>
+  <body>
+    <input type="text" id="entry">
+    <span id="output">Start typing</span>
+    <script type="text/javascript">
+      var app = {};
+      // a short way to get elements
+      app.getElement = function(element){
+        return document.getElementById(element)
+      }
+
+      // get elements
+      app.entry = app.getElement('entry');
+      app.output = app.getElement('output');
+
+      // create event handler
+      app.entry.onkeyup = function(){
+        app.output.innerText = this.value
+      }
+    </script>
+  </body>
+</html>
